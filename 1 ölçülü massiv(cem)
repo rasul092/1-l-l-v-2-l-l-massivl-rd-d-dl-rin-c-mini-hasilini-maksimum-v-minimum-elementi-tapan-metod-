@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+
+int main() { // 1 olculu matrisde ededlerin cemi
+   int array[]={2,1,5,7,8,4,5};
+   int n=sizeof(array)/ sizeof(array[0]);
+   
+   int sum=0;
+   for (int i=0; i<n;i++){
+    sum+=array[i];   
+   }
+   cout<<"Massivdeki ededlerin cemi : "<<sum;
+  
+   
+   
+
+    return 0;
+}

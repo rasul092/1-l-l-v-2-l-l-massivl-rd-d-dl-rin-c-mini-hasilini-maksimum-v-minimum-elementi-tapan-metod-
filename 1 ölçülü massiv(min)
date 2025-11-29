@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+
+int main() { // 1 olculu matrisde ededlerin en kiciyini tapan kod
+   int array[]={9,7,34,54,1,2};
+   int n=sizeof(array)/ sizeof(array[0]);
+   int min=array[0];
+   for (int i=0; i<n;i++){
+    if(array[i]<min) min=array[i];   
+   }
+   cout<<"Massivdeki ededlerin en kiciyi : "<<min;
+  
+   
+   
+
+    return 0;
+}

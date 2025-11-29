@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+
+int main() { // 2olculu massivde minimum ededi tapan kod
+    int matrix[3][4]={
+        {3,10,4,5},
+        {5,7,13,4},
+        {2,12,34,4}
+    };
+    int min=matrix [0][0];
+    int rows=sizeof(matrix)/sizeof(matrix[0]);
+    int cols=sizeof(matrix[0])/sizeof(matrix[0][0]);
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+        if(matrix[i][j]<min) min=matrix [i][j];
+    }
+}
+cout<<"2 olculu massivde minimium eded : "<<min<<endl;
+
+return 0;
+}

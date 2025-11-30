@@ -1,23 +1,26 @@
 #include <iostream>
 using namespace std;
 
-
-int main() { 
-    int matrix [3][3]={ // 2 olculu massivde ededlerin en boyuyu 
+void print() { // 2 ölçülü massivdə ədədlərin ən böyüyünü tapan funksiya
+    int matrix[3][3] = {
         {3,4,1},
         {2,2,4},
         {2,1,1}
     };
-    int max=matrix[0][0];
-    int n=sizeof(matrix)/sizeof(matrix[0]);
-    
 
-for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-        if(matrix[i][j]>max) max=matrix[i][j];
+    int max = matrix[0][0];
+    int n = sizeof(matrix) / sizeof(matrix[0]); // satır sayı
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if(matrix[i][j] > max) 
+                max = matrix[i][j];
+        }
     }
+    cout << "2 ölçülü massivdə olan ədədlərin ən böyüyü : " << max << endl;
 }
-cout<<"2 olculu massivde olan ededlerin en boyuyu : "<<max<<endl;
-    return 0;
-    
+
+int main() {
+    print(); 
+    return 0;
 }

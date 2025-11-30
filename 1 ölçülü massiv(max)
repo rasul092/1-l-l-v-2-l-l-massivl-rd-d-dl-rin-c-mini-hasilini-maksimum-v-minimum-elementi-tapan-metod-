@@ -1,18 +1,19 @@
 #include <iostream>
 using namespace std;
 
+void print() { // 1 ölçülü massivdə ədədlərin ən böyüyünü tapan funksiya
+    int array[]={7,2,1,5,21,52};
+    int n=sizeof(array)/ sizeof(array[0]);
+    int max=array[0];
+    
+    for (int i=0; i<n; i++){
+        if(array[i] > max) 
+            max = array[i];   
+    }
+    cout << "Massivdəki ədədlərin ən böyüyü : " << max;
+}
 
-int main() { // 1 olculu matrisde ededlerin en boyuyunu tapan kod
-   int array[]={7,2,1,5,21,52};
-   int n=sizeof(array)/ sizeof(array[0]);
-   int max=array[0];
-   for (int i=0; i<n;i++){
-    if(array[i]>max) max=array[i];   
-   }
-   cout<<"Massivdeki ededlerin en boyuyu : "<<max;
-  
-   
-   
-
-    return 0;
+int main() {
+    print(); // funksiyanı çağırırıq
+    return 0;
 }

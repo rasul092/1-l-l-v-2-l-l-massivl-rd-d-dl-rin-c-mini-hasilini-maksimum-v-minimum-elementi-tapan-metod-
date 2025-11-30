@@ -1,19 +1,18 @@
 #include <iostream>
 using namespace std;
 
+void print() { // 1 ölçülü massivdə ədədlərin hasilini tapan funksiya
+    int array[]={2,1,5,7,8,4,5};
+    int n=sizeof(array)/ sizeof(array[0]);
+   
+    int product=1;
+    for (int i=0; i<n; i++){
+        product *= array[i];   
+    }
+    cout << "Massivdəki ədədlərin hasili : " << product << endl;
+}
 
-int main() { // 1 olculu matrisde ededlerin hasili
-   int array[]={2,1,5,7,8,4,5};
-   int n=sizeof(array)/ sizeof(array[0]);
-   
-   int product=1;
-   for (int i=0; i<n;i++){
-    product*=array[i];   
-   }
-   cout<<"Massivdeki ededlerin hasili : "<<product;
-  
-   
-   
-
-    return 0;
+int main() {
+    print(); 
+    return 0;
 }

@@ -1,22 +1,25 @@
 #include <iostream>
 using namespace std;
 
-
-int main() { 
-    int matrix [3][3]={ // 2 olculu massivde ededleri hasili
+void print() { // 2 ölçülü massivdə ədədlərin hasilini tapan funksiya
+    int matrix[3][3] = {
         {3,4,1},
         {2,2,4},
         {2,1,1}
     };
-    int product=1;
-    int n=sizeof(matrix)/sizeof(matrix[0]);
-    
 
-for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-        product*=matrix[i][j];
-    }
+    int product = 1;
+    int n = sizeof(matrix) / sizeof(matrix[0]); 
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            product *= matrix[i][j];
+        }
+    }
+    cout << "2 ölçülü massivdəki ədədlərin hasili : " << product << endl;
 }
-cout<<"2 olculu massivdeki ededlerin hasili : "<<product<<endl;
-return 0;
+
+int main() {
+    print(); 
+    return 0;
 }
